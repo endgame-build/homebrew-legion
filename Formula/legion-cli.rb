@@ -14,24 +14,11 @@ class LegionCli < Formula
   depends_on "python@3.12"
   depends_on "uv" => :optional
 
-  resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/source/s/setuptools/setuptools-75.6.0.tar.gz"
-    sha256 "595e5a2f2a46fb0d1d1b0198e853c319673b8664132fe7c0fd7eb58d09ca15d2"
-  end
-
-  resource "wheel" do
-    url "https://files.pythonhosted.org/packages/source/w/wheel/wheel-0.45.1.tar.gz"
-    sha256 "595e5a2f2a46fb0d1d1b0198e853c319673b8664132fe7c0fd7eb58d09ca15d2"
-  end
-
   def install
     # Create virtualenv
     venv = virtualenv_create(libexec, "python3.12")
     
-    # Install build dependencies first
-    venv.pip_install resources
-    
-    # Install legion-cli
+    # Install legion-cli directly (pip will handle dependencies)
     venv.pip_install_and_link buildpath
     
     # Generate shell completions if available

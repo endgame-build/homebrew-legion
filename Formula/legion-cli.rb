@@ -7,21 +7,21 @@ class LegionCli < Formula
   head "https://github.com/endgame-build/legion-cli.git", branch: "main"
 
   # This will be updated automatically by the release workflow
-  url "https://github.com/endgame-build/legion-cli/archive/refs/tags/dev-placeholder.tar.gz"
-  sha256 "placeholder-sha256"
-  version "0.1.0-dev"
+  url "https://github.com/endgame-build/legion-cli-releases/releases/download/dev-b7158f0/legion_cli-0.1.dev20250630+gb7158f0.tar.gz"
+  sha256 "595e5a2f2a46fb0d1d1b0198e853c319673b8664132fe7c0fd7eb58d09ca15d2"
+  version "0.1.dev20250630+gb7158f0"
 
   depends_on "python@3.12"
   depends_on "uv" => :optional
 
   resource "setuptools" do
     url "https://files.pythonhosted.org/packages/source/s/setuptools/setuptools-75.6.0.tar.gz"
-    sha256 "8199222558df7c86216af4f84c30e9b34a61d8ba19366cc914424cdbd28252f6"
+    sha256 "595e5a2f2a46fb0d1d1b0198e853c319673b8664132fe7c0fd7eb58d09ca15d2"
   end
 
   resource "wheel" do
     url "https://files.pythonhosted.org/packages/source/w/wheel/wheel-0.45.1.tar.gz"
-    sha256 "661e1abd9198507b1409a20c02106d313e2a9e5f42f7895563e52ccb3d8d8b4"
+    sha256 "595e5a2f2a46fb0d1d1b0198e853c319673b8664132fe7c0fd7eb58d09ca15d2"
   end
 
   def install

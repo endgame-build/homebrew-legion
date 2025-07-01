@@ -6,20 +6,20 @@ class LegionCliStable < Formula
   license "MIT"
 
   # This will be updated when stable releases are made
-  url "https://files.pythonhosted.org/packages/source/l/legion-cli/legion-cli-0.1.0.tar.gz"
-  sha256 "placeholder-sha256"
-  version "0.1.0"
+  url "https://files.pythonhosted.org/packages/source/l/legion-cli/legion-cli-0.4.1.tar.gz"
+  sha256 "0da2a0bdc00450f680a66a0125975b1cc94e84acebaaf9bd4a01e5e1083043d5"
+  version "0.4.1"
 
   depends_on "python@3.12"
 
   resource "setuptools" do
     url "https://files.pythonhosted.org/packages/source/s/setuptools/setuptools-75.6.0.tar.gz"
-    sha256 "8199222558df7c86216af4f84c30e9b34a61d8ba19366cc914424cdbd28252f6"
+    sha256 "0da2a0bdc00450f680a66a0125975b1cc94e84acebaaf9bd4a01e5e1083043d5"
   end
 
   resource "wheel" do
     url "https://files.pythonhosted.org/packages/source/w/wheel/wheel-0.45.1.tar.gz"
-    sha256 "661e1abd9198507b1409a20c02106d313e2a9e5f42f7895563e52ccb3d8d8b4"
+    sha256 "0da2a0bdc00450f680a66a0125975b1cc94e84acebaaf9bd4a01e5e1083043d5"
   end
 
   def install

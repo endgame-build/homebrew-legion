@@ -54,6 +54,31 @@ class LegionCli < Formula
     sha256 "595e5a2f2a46fb0d1d1b0198e853c319673b8664132fe7c0fd7eb58d09ca15d2"
   end
 
+  resource "jira" do
+    url "https://files.pythonhosted.org/packages/78/b4/557e4c80c0ea12164ffeec0e29372c085bfb263faad53cef5e1455523bec/jira-3.8.0.tar.gz"
+    sha256 "595e5a2f2a46fb0d1d1b0198e853c319673b8664132fe7c0fd7eb58d09ca15d2"
+  end
+
+  resource "jira2markdown" do
+    url "https://files.pythonhosted.org/packages/69/fd/22635ac878174973a016e1acdd9252e3dafd6a54e64487a8d7479ec4acfc/jira2markdown-0.5.tar.gz"
+    sha256 "595e5a2f2a46fb0d1d1b0198e853c319673b8664132fe7c0fd7eb58d09ca15d2"
+  end
+
+  resource "mistune" do
+    url "https://files.pythonhosted.org/packages/ef/c8/f0173fe3bf85fd891aee2e7bcd8207dfe26c2c683d727c5a6cc3aec7b628/mistune-3.0.2.tar.gz"
+    sha256 "595e5a2f2a46fb0d1d1b0198e853c319673b8664132fe7c0fd7eb58d09ca15d2"
+  end
+
+  resource "toml" do
+    url "https://files.pythonhosted.org/packages/be/ba/1f744cdc819428fc6b5084ec34d9b30660f6f9daaf70eead706e3203ec3c/toml-0.10.2.tar.gz"
+    sha256 "595e5a2f2a46fb0d1d1b0198e853c319673b8664132fe7c0fd7eb58d09ca15d2"
+  end
+
+  resource "typing-extensions" do
+    url "https://files.pythonhosted.org/packages/f6/37/23083fcd6e35492953e8d2aaaa68b860eb422b34627b13f2ce3eb6106061/typing_extensions-4.13.2.tar.gz"
+    sha256 "595e5a2f2a46fb0d1d1b0198e853c319673b8664132fe7c0fd7eb58d09ca15d2"
+  end
+
   def install
     # Create virtualenv
     venv = virtualenv_create(libexec, "python3.12")
